@@ -2,10 +2,16 @@
 <h1>我的灵魂.SKILL</h1>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
-[![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
+[![AI Agent](https://img.shields.io/badge/AI--Agent-SKILL-blue.svg)](LICENSE)
+
+[English](./README_en-US.md)
+[简体中文](./README_zh-CN.md)
+[日本語](./README_ja-JP)
 
 </div>
+
+
+> **“让灵魂不再被碎片化，让数字永生由自己主宰。”**
 
 > - 我们每个人的灵魂都是与自己高度平等的。别人来蒸馏你，得到的是片面的、扁形的、孤立的、不完整的你，是你的灵魂的碎片，那不是你！唯有你主动塑造自己，才能创造一个全面的、圆形的、有血有肉的、完整的你。
 > - 让你的灵魂数字永生，不应该是将自己的数字永生权被动地交给别人，被别人随意地修改，而应该主动地向世界庄严宣告：“我的灵魂底色是这样的，我主动把自己的灵魂底色展示给你们看，你们不允许再抽取我的灵魂碎片，造出一个像我但不是我的东西！”
@@ -84,10 +90,11 @@
 
 ### 关于本仓库
 
-- 本项目SKILL依托大语言模型做数据清洗和分类。
+- 本项目SKILL需要依托大语言模型做数据清洗和分类。
 - 欢迎广大开发者为本仓库提供补充思路。
 - 为保证规范化与仓库安全，所有合并请求都需要被严格审查。
 - 本仓库急需补充以下内容，诚邀各位开发者参与维护与补充：
+  - SKILL.md
   - README.md 的更专业表述
   - README.md 的多语言翻译
   - 翻译 **POSL License** 的规范化英文版本
