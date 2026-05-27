@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MySoul.SKILL Project Meta",
+  "description": "MySoul.SKILL 项目元信息结构",
+  "type": "object",
+  "required": ["project_id", "name", "created_at", "updated_at", "version", "status", "data_streams", "build_count", "config"],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^MS-[a-zA-Z0-9_-]+-[a-zA-Z0-9]{6}$",
+      "description": "项目唯一标识符"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]+$",
+      "minLength": 1,
+      "maxLength": 64,
+      "description": "项目名称"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "创建时间（ISO 8601）"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "最后更新时间（ISO 8601）"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "语义化版本号"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["created", "data_added", "building", "built", "error"],
+      "description": "项目状态"
+    },
+    "data_streams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "filename", "added_at", "word_count", "quality"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "数据流唯一标识"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["diary", "blog", "social", "interview", "conversation", "values", "thinking", "professional", "other"],
+            "description": "数据流类型"
+          },
+          "filename": {
+            "type": "string",
+            "description": "文件名"
+          },
+          "added_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "添加时间"
+          },
+          "word_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "字数"
+          },
+          "quality": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "质量等级"
+          }
+        }
+      },
+      "description": "数据流列表"
+    },
+    "build_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "构建次数"
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "stateful": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否有状态模式"
+        },
+        "personality_scope": {
+          "type": "string",
+          "enum": ["full", "partial"],
+          "default": "full",
+          "description": "人格范围"
+        },
+        "language": {
+          "type": "string",
+          "enum": ["zh-CN", "en-US", "ja-JP"],
+          "default": "zh-CN",
+          "description": "语言"
+        }
+      },
+      "description": "项目配置"
+    },
+    "version_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "description": "版本号"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "构建时间"
+          },
+          "quality_score": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "质量评分"
+          }
+        }
+      },
+      "description": "版本历史"
+    }
+  }
+}
