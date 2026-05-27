@@ -24,7 +24,9 @@
 
 **MySoul.SKILL** is a revolutionary framework for building personal digital clones. It aims to enable everyone to actively shape, control, and protect their own digital personality.
 
-Provide any information about yourself. As long as the information is sufficient, the context window of the large language model you use is long enough, and its modality supports these information types, this SKILL can generate a digital clone copy.SKILL exclusively for you, allowing you to distribute that copy to others, resonate with your own soul, use it for companionship, or expand your social network.
+Provide your authentic personal data (diaries, conversations, value descriptions, etc.), and this framework will generate a standardized digital clone `.SKILL` file through large language models, suitable for social showcase, self-reflection, or companionship.
+
+> **Quick Start**: See [Quick Start Guide](./docs/quickstart.md) | **Technical Spec**: See [SKILL.md](./SKILL.md)
 
 ### Core Philosophy
 
@@ -76,6 +78,8 @@ Use command: `/add [project_name] [data_stream]`
 - Descriptions of thinking patterns and decision logic
 - Other information reflecting personal personality traits
 
+> Data stream templates are available in the [`templates/`](./templates/) directory, including 8 types: diary, values, conversation, thinking patterns, etc.
+
 **Example:**
 ```
 /add MyDigitalSoul I like thinking about life late at night, and I believe in the power of technology to change the world...
@@ -114,6 +118,8 @@ This will use all the data streams you provided and leverage large language mode
 ### 2. Standard Usage of Product SKILL
 
 The product SKILL is a digital clone generated through this SKILL. For usage methods, please refer to: [Template README.md](./dist/template/README.md)
+
+> Example product: [Example: Xiao Ming's Digital Clone](./dist/example/README.md)
 
 > In this document, "product" and "product SKILL" both refer to SKILL projects that meet the standard generated through this SKILL. Their practical significance is to represent an AI digital clone of a person.
 
@@ -277,7 +283,11 @@ This repository urgently needs the following content, and developers are invited
 - ✅ Basic framework implementation
 - ✅ Text data stream processing
 - ✅ PLOSL agreement definition
-- ⏳ Basic documentation completion
+- ✅ Basic documentation completion
+- ✅ Data stream templates (8 types)
+- ✅ Build scripts (Unix/Windows)
+- ✅ Example product
+- ✅ Claude Code integration
 
 ### v1.1.0 (Planned)
 - 📝 Multimodal data support (voice, images)

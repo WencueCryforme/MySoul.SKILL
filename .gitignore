@@ -1,0 +1,7 @@
+.claude/
+.github/
+dist/
+docs/
+node_modules/
+*test*
+*template*
